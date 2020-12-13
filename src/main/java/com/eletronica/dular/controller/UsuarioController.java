@@ -1,6 +1,7 @@
 package com.eletronica.dular.controller;
 
 import com.eletronica.dular.DTO.UsuarioDTO;
+import com.eletronica.dular.domain.Usuario;
 import com.eletronica.dular.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -20,7 +21,7 @@ public class UsuarioController {
 
     @RequestMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
     public UsuarioDTO create(@RequestBody UsuarioDTO usuarioDTO){
-        return null;
-
+        Usuario usuario = usuarioService.create(usuarioDTO.toUsuario(usuarioDTO));
+        return new UsuarioDTO().build(usuario);
     }
 }
