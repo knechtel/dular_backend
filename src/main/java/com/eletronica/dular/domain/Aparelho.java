@@ -1,5 +1,6 @@
 package com.eletronica.dular.domain;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -8,6 +9,7 @@ import java.io.Serializable;
 /**
  * Created by maiquelknechtel on 12/9/20.
  */
+@Entity
 public class Aparelho implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
