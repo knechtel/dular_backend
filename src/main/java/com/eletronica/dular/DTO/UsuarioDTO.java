@@ -43,4 +43,8 @@ public class UsuarioDTO {
     public UsuarioDTO build(Usuario usuario){
         return new UsuarioDTO(usuario.getId(),usuario.getNome(),usuario.getSenha());
     }
+
+    public Usuario toUsuario(UsuarioDTO usuarioDTO){
+        return new Usuario(usuarioDTO.getId(),usuarioDTO.getNome(),usuarioDTO.getSenha());
+    }
 }
