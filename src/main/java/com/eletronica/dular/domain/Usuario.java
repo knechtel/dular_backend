@@ -14,6 +14,16 @@ public class Usuario {
     private String nome;
     private String senha;
 
+    public Usuario(){
+
+    }
+
+    public Usuario(Integer id, String nome, String senha) {
+        this.id = id;
+        this.nome = nome;
+        this.senha = senha;
+    }
+
     public Integer getId() {
         return id;
     }
