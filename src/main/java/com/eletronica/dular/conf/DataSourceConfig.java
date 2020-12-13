@@ -16,7 +16,7 @@ public class DataSourceConfig {
     public DataSource datasource() {
         return DataSourceBuilder.create()
                 .driverClassName("org.mariadb.jdbc.Driver")
-                .url("jdbc:mariadb://localhost:3306/qintess")
+                .url("jdbc:mariadb://localhost:3306/dular")
                 .username("root")
                 .password("123")
                 .build();
